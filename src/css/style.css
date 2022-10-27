@@ -1,22 +1,107 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: onest;
+  src: url(fonts/OnestRegular1602-hint.woff);
+}
+body {
+  font-family: onest;
+}
+
+.bckg {
+  background-color: #F8F9FD;
+}
+
 .header {
   width: 100%;
 }
 .header__container {
   max-width: 85%;
-  margin: 33px auto;
-  background-color: rgb(0, 191, 255);
-  display: -ms-flex;
+  margin: 0px auto;
+  padding-top: 30px;
   display: flex;
-  -ms-align-items: center;
   align-items: center;
+  justify-content: space-between;
 }
 .header__logo {
-  margin-left: 150px;
+  display: flex;
 }
 .header__menu {
-  color: #1F2131;
   list-style-type: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 .header__menu li {
   display: inline-block;
@@ -24,5 +109,144 @@
 }
 .header__menu a {
   display: block;
-  text-decoration: none;
+  color: #1F2131;
+}
+.header__menu a:hover {
+  color: #5F4BDB;
+}
+.header__buttons a {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 15px 50px;
+}
+.header__buttons__login {
+  margin-right: 20px;
+  color: #1F2131;
+  background-color: #F0EEFF;
+  transition: background 0.3s ease-in-out;
+}
+.header__buttons__signup {
+  background-color: #5F4BDB;
+  color: #FFF;
+  transition: background 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.header__buttons__login:hover {
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 29px rgba(181, 181, 181, 0.14);
+}
+.header__buttons__signup:hover {
+  background-color: #5241c1;
+  box-shadow: 0px 4px 29px rgba(62, 53, 120, 0.14);
+}
+
+.main__container {
+  max-width: 85%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main__left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3px;
+}
+.main__left__title {
+  margin-top: 5px;
+  color: #1F2131;
+  font-size: 55px;
+  font-weight: 600;
+}
+.main__left__title_purple {
+  color: #5F4BDB;
+}
+.main__left__subtitle {
+  font-size: 16px;
+  color: #1F2131;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.main__left__searchfield {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.main__left__searchfield__input {
+  padding-left: 20px;
+  font-size: inherit;
+  width: 500px;
+  height: 65px;
+  background: #FFF;
+  box-shadow: 0px 19px 84px rgba(0, 0, 0, 0.04);
+  border-radius: 60px;
+}
+.main__left__searchfield__button {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  background: #5F4BDB;
+  border-radius: 30px;
+  color: #FFF;
+  font-size: inherit;
+  font-family: inherit;
+  transform: translateX(-8px);
+  transition: background 0.3s ease-in-out;
+}
+.main__left__searchfield__button:hover {
+  background-color: #5241c1;
+}
+.main__right {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.main__right__man {
+  width: 860px;
+  height: 500px;
+}
+
+.main-header {
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+  color: #1F2131;
+}
+
+.crypto-topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.crypto-topics__line {
+  width: 140px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #5F4BDB;
+}
+.crypto-topics__all {
+  display: flex;
+  gap: 25px;
+}
+.crypto-topics__all__topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 220px;
+  height: 225px;
+  box-shadow: 0px 2px 20px rgba(31, 31, 51, 0.3);
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
