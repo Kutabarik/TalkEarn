@@ -217,9 +217,16 @@ body {
 
 .main-header {
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   color: #1F2131;
+}
+
+.header-line {
+  width: 140px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #5F4BDB;
 }
 
 .crypto-topics {
@@ -227,12 +234,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-}
-.crypto-topics__line {
-  width: 140px;
-  height: 5px;
-  border-radius: 3px;
-  background-color: #5F4BDB;
 }
 .crypto-topics__all {
   display: flex;
@@ -245,8 +246,171 @@ body {
   justify-content: space-evenly;
   width: 220px;
   height: 225px;
-  box-shadow: 0px 2px 20px rgba(31, 31, 51, 0.3);
+  box-shadow: 0px 5px 10px rgba(31, 31, 51, 0.3);
   border-radius: 20px;
+  color: #1F2131;
   font-size: 20px;
   font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+.crypto-topics__all__topic:hover {
+  color: #FFF;
+  background-color: #5F4BDB;
+}
+
+.featured-experts {
+  margin: 70px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.featured-experts__experts {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.featured-experts__experts__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5F4BDB;
+  border-radius: 95px;
+  width: 49px;
+  height: 45px;
+}
+.featured-experts__experts__arrow img {
+  width: 24px;
+  height: 24px;
+}
+.featured-experts__experts__card {
+  padding: 20px;
+  width: 320px;
+}
+.featured-experts__experts__card_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.featured-experts__experts__card_left__photo {
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+}
+.featured-experts__experts__card_left__photo img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featured-experts__experts__card_left__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.featured-experts__experts__card_left__text_name {
+  font-weight: 600;
+}
+.featured-experts__experts__card_left__text _profession {
+  font-weight: 400;
+}
+.featured-experts__experts__card_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.featured-experts__experts__card_right_stars {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.featured-experts__experts__card_right img {
+  display: inline-block;
+}
+.featured-experts__experts__card_right_btn {
+  background-color: #FE8D4D;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+.how-it-works {
+  max-width: 85%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.how-it-works__left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.how-it-works__left__little-title {
+  color: #5F4BDB;
+  font-size: 18px;
+}
+.how-it-works__left__title {
+  color: #1F2131;
+  font-size: 40px;
+  font-weight: 600;
+}
+.how-it-works__left__accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 645px;
+  border: none;
+  text-align: left;
+  border-radius: 20px;
+  box-shadow: 0px 7px 22px rgba(143, 134, 196, 0.07);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.how-it-works__left__accordion__btn:hover {
+  box-shadow: 0px 10px 29px rgba(62, 53, 120, 0.14);
+}
+.how-it-works__left__accordion__btn1__number, .how-it-works__left__accordion__btn2__number, .how-it-works__left__accordion__btn3__number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.how-it-works__left__accordion__btn1__number span, .how-it-works__left__accordion__btn2__number span, .how-it-works__left__accordion__btn3__number span {
+  font-weight: 600;
+}
+.how-it-works__left__accordion__btn1__number button {
+  padding: 13px 25px;
+  background-color: #F6EBFF;
+  border-radius: 20px;
+  color: #5F4BDB;
+  font-size: 26px;
+}
+.how-it-works__left__accordion__btn2__number button {
+  padding: 13px 25px;
+  background-color: #E7E9FF;
+  border-radius: 20px;
+  color: #2B3DC7;
+  font-size: 26px;
+}
+.how-it-works__left__accordion__btn3__number button {
+  padding: 13px 25px;
+  background-color: #E9FFEF;
+  border-radius: 20px;
+  color: #3DCD65;
+  font-size: 26px;
+}
+.how-it-works__right__video img {
+  width: 500px;
+  border-radius: 40px;
 }/*# sourceMappingURL=style.css.map */
