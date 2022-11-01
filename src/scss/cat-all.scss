@@ -1,0 +1,15 @@
+@import "nullstyle.scss";
+@import "style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.crypto-topics {
+    &__all {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 90px;
+        &__row {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

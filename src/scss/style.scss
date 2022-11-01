@@ -20,6 +20,7 @@ body{
     background-color: #F8F9FD;
 }
 
+//Header
 
 .header {
     width: 100%;
@@ -80,6 +81,8 @@ body{
         }
     }
 }
+
+//Main
 
 .main {
     &__container {
@@ -170,6 +173,8 @@ body{
     background-color: $purpleColor;
 }
 
+//Crypto topics
+
 .crypto-topics{
     display: flex;
     flex-direction: column;
@@ -200,6 +205,8 @@ body{
         }
     }
 }
+
+//Featured experts
 
 .featured-experts {
     margin: 70px auto;
@@ -282,6 +289,8 @@ body{
         }
     }
 }
+
+//How it works
 
 .how-it-works {
     max-width: 85%;
@@ -378,6 +387,8 @@ body{
     }
 }
 
+//Bacome an expert
+
 .become-expert {
     margin-top: 60px;
     &__container{
@@ -414,6 +425,8 @@ body{
         }
     }
 }
+
+//Benefits
 
 .benefits {
     width: 85%;
@@ -463,6 +476,8 @@ body{
         }
     }
 }
+
+//Customers
 
 .customers {
     width: 85%;
@@ -540,6 +555,8 @@ body{
         }
     }
 }
+
+//Footer
 
 .footer {
     width: 100%;
