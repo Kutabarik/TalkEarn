@@ -654,7 +654,6 @@ body {
 .footer__container {
   max-width: 85%;
   margin: 0px auto;
-  padding: 70px 0;
   display: flex;
   justify-content: space-between;
   gap: 45px;
