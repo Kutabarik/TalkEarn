@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -149,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @font-face {
   font-family: onest;
-  src: url(fonts/OnestRegular1602-hint.woff);
+  src: url(../fonts/OnestRegular1602-hint.woff);
 }
 body {
   font-family: onest;
@@ -713,9 +711,13 @@ body {
   gap: 7px;
 }
 
+@font-face {
+  font-family: onest;
+  src: url(../fonts/OnestRegular1602-hint.woff);
+}
 .main-cat__container {
   width: 85%;
-  height: 580px;
+  height: 700px;
   margin: 70px auto;
   position: relative;
   display: flex;
@@ -757,9 +759,16 @@ body {
   width: 850px;
   height: 80px;
 }
-.main-cat__container__content__searchfield__select {
-  padding: 20px;
+.main-cat__container__content__searchfield select {
+  background-color: #fff;
   border-radius: 50px 0 0 50px;
+  padding: 19.5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(/img/cat-one/all-experts/arrow.svg);
+  background-position: calc(100% - 1.1em) 1.7em;
+  background-repeat: no-repeat;
 }
 .main-cat__container__content__searchfield__input {
   padding: 20px;
@@ -798,4 +807,209 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: #1F2131;
+}
+
+.all-experts__container {
+  width: 85%;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: column;
+}
+.all-experts__container__head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.all-experts__container__head__left {
+  font-size: 30px;
+  font-weight: 600;
+}
+.all-experts__container__head__right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.all-experts__container__head__right__online {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Rounded sliders */
+}
+.all-experts__container__head__right__online__switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.all-experts__container__head__right__online__switch input {
+  display: none;
+}
+.all-experts__container__head__right__online__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.all-experts__container__head__right__online__slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+input:checked + .all-experts__container__head__right__online__slider {
+  background-color: #5F4BDB;
+}
+input:focus + .all-experts__container__head__right__online__slider {
+  box-shadow: 0 0 1px #5F4BDB;
+}
+input:checked + .all-experts__container__head__right__online__slider:before {
+  transform: translateX(26px);
+}
+.all-experts__container__head__right__online__slider.round {
+  border-radius: 34px;
+}
+.all-experts__container__head__right__online__slider.round:before {
+  border-radius: 50%;
+}
+.all-experts__container__head__right__category select {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #E6E6E6;
+  border-radius: 60px;
+  padding: 15px 20px 15px 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(/img/cat-one/all-experts/arrow.svg);
+  background-position: calc(100% - 1.1em) 1.05em;
+  background-repeat: no-repeat;
+}
+.all-experts__container__head__right__filter a {
+  background: #E6E6E6;
+  border-radius: 60px;
+  padding: 18px 20px 20px;
+}
+.all-experts__container__cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 45px;
+}
+.all-experts__container__cards__block {
+  width: 300px;
+  height: 355px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+}
+.all-experts__container__cards__block__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.all-experts__container__cards__block__photo__online {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #30C736;
+  border-radius: 39px;
+  padding: 10px 20px;
+  margin-top: -25px;
+}
+.all-experts__container__cards__block__photo img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.all-experts__container__cards__block__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.all-experts__container__cards__block__info__name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.all-experts__container__cards__block__info__proffesion {
+  font-size: 15px;
+  font-weight: 400;
+}
+.all-experts__container__cards__block__info__rating {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.all-experts__container__cards__block__info__rating__number {
+  font-size: 16px;
+  font-weight: 700;
+}
+.all-experts__container__cards__block__more-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.all-experts__container__cards__block__more-info__text {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.all-experts__container__cards__block__more-info__text span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.all-experts__container__cards__block__more-info__text p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.all-experts__container__cards__block:hover {
+  box-shadow: 0px 11px 39px rgba(0, 0, 0, 0.07);
+}
+.all-experts__container__pagination {
+  margin: 60px auto;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+.all-experts__container__pagination__previous, .all-experts__container__pagination__next {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.all-experts__container__pagination__previous span, .all-experts__container__pagination__next span {
+  color: #5F4BDB;
+  font-size: 18px;
+  font-weight: 500;
+}
+.all-experts__container__pagination__numbers {
+  display: flex;
+  gap: 10px;
+}
+.all-experts__container__pagination__numbers span {
+  color: #5F4BDB;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 25px;
+}
+.all-experts__container__pagination__numbers span:hover {
+  color: #FFF;
+  background-color: #5F4BDB;
+  border-radius: 61px;
 }/*# sourceMappingURL=cat-one.css.map */

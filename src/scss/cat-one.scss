@@ -1,12 +1,15 @@
 @import "nullstyle.scss";
 @import "style.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: onest;
+    src: url(../fonts/OnestRegular1602-hint.woff);
+}
 
 .main-cat {
-    
     &__container {
         width: 85%;
-        height: 580px;
+        height: 700px;
         margin: 70px auto;
         position: relative;
         display: flex;
@@ -14,32 +17,40 @@
         background-image: url(/img/cat-one/main/background.png);
         background-repeat: no-repeat;
         background-size: 100%;
+
         &__bckg {
             width: 100%;
             position: absolute;
         }
+
         &__content {
             margin-top: 75px;
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 30px;
+
             &__logo {
                 height: 100px;
             }
+
             &__text {
-                &-1, &-2 {
+
+                &-1,
+                &-2 {
                     font-size: 35px;
                     font-weight: 500;
                     text-align: center;
                     color: $darkColor;
                     margin-bottom: 7px;
+
                     & span {
                         color: $purpleColor;
                         font-weight: 800;
                     }
                 }
             }
+
             &__searchfield {
                 display: flex;
                 justify-content: center;
@@ -47,15 +58,23 @@
                 position: relative;
                 width: 850px;
                 height: 80px;
-                &__select {
-                    padding: 20px;
+                
+                & select {
+                    background-color: #fff;
                     border-radius: 50px 0 0 50px;
+                    padding: 19.5px;
+                    appearance: none;
+                    background-image: url(/img/cat-one/all-experts/arrow.svg);
+                    background-position: calc(100% - 1.1em) 1.7em;
+                    background-repeat: no-repeat;
                 }
+            
                 &__input {
                     padding: 20px;
                     width: 500px;
                     border-radius: 0 50px 50px 0;
                 }
+
                 &__link {
                     display: flex;
                     align-items: center;
@@ -66,23 +85,32 @@
                     box-shadow: 0px 19px 84px rgba(62, 53, 120, 0.05);
                     border-radius: 37px;
                     padding: 12px 35px;
+
                     & img {
                         height: 20px;
                     }
+
                     & a {
                         color: $whiteColor;
                         font-weight: 600;
-                        padding-top: 1px;   
+                        padding-top: 1px;
                     }
                 }
             }
+
             &__tags {
-                display: flex;  
+                display: flex;
                 gap: 20px;
-                &-1,&-2,&-3,&-4,&-5 {
+
+                &-1,
+                &-2,
+                &-3,
+                &-4,
+                &-5 {
                     border: 1px solid #E9E6FE;
                     border-radius: 50px;
-                        padding: 8px 22px;
+                    padding: 8px 22px;
+
                     & span {
                         font-size: 14px;
                         font-weight: 500;
@@ -91,5 +119,248 @@
                 }
             }
         }
+    }
+}
+
+.all-experts {
+    &__container {
+        width: 85%;
+        margin: 70px auto;
+        display: flex;
+        flex-direction: column;
+
+        &__head {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &__left {
+                font-size: 30px;
+                font-weight: 600;
+
+            }
+
+            &__right {
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                font-size: $fs;
+                font-weight: 600;
+
+                &__online {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &__switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 50px;
+                        height: 24px;
+                    }
+
+                    &__switch input {
+                        display: none;
+                    }
+
+                    &__slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ccc;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+
+                    &__slider:before {
+                        position: absolute;
+                        content: "";
+                        height: 16px;
+                        width: 16px;
+                        left: 4px;
+                        bottom: 4px;
+                        background-color: white;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+
+                    input:checked+&__slider {
+                        background-color: $purpleColor;
+                    }
+
+                    input:focus+&__slider {
+                        box-shadow: 0 0 1px $purpleColor;
+                    }
+
+                    input:checked+&__slider:before {
+                        -webkit-transform: translateX(26px);
+                        -ms-transform: translateX(26px);
+                        transform: translateX(26px);
+                    }
+
+                    /* Rounded sliders */
+                    &__slider.round {
+                        border-radius: 34px;
+                    }
+
+                    &__slider.round:before {
+                        border-radius: 50%;
+                    }
+                }
+                &__category {
+                    & select {
+                        font-size: 18px;
+                        font-weight: 500;
+                        background-color: #fff;
+                        border: 1px solid #E6E6E6;
+                        border-radius: 60px;
+                        padding: 15px 20px 15px 20px;
+                        appearance: none;
+                        background-image: url(/img/cat-one/all-experts/arrow.svg);
+                        background-position: calc(100% - 1.1em) 1.05em;
+                        background-repeat: no-repeat;
+                    }
+                }
+                &__filter {
+                    & a {
+                        background: #E6E6E6;
+                        border-radius: 60px;
+                        padding: 18px 20px 20px;
+                    }
+                }
+            }
+        }
+
+        &__cards {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            gap: 45px;
+
+            &__block {
+                width: 300px;
+                height: 355px;
+                border-radius: 18px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                padding: 10px;
+
+                &__photo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__online {
+                        color: $whiteColor;
+                        font-size: 14px;
+                        font-weight: 700;
+                        background-color: #30C736;
+                        border-radius: 39px;
+                        padding: 10px 20px;
+                        margin-top: -25px;
+                    }
+
+                    & img {
+                        width: 110px;
+                        height: 110px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+                    &__name {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    &__proffesion {
+                        font-size: 15px;
+                        font-weight: 400;
+                    }
+
+                    &__rating {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 10px;
+
+                        &__number {
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                &__more-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &__text {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 60px;
+
+                        & span {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+
+                        & p {
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            &__block:hover {
+                box-shadow: 0px 11px 39px rgba(0, 0, 0, 0.07);
+            }
+
+        }
+
+        &__pagination {
+            margin: 60px auto;
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            &__previous, &__next {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                & span {
+                    color: $purpleColor;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+            &__numbers {
+                display: flex;
+                gap: 10px;
+                & span {
+                    color: $purpleColor;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 15px 25px;
+                }
+                & span:hover {
+                    color: $whiteColor;
+                    background-color: $purpleColor;
+                    border-radius: 61px;
+                }
+            }
+        }
+
     }
 }

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -75,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @font-face {
   font-family: onest;
-  src: url(fonts/OnestRegular1602-hint.woff);
+  src: url(../fonts/OnestRegular1602-hint.woff);
 }
 body {
   font-family: onest;
