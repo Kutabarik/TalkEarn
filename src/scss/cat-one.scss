@@ -133,11 +133,10 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            align-items: center;
             &__left {
                 font-size: 30px;
                 font-weight: 600;
-
             }
 
             &__right {

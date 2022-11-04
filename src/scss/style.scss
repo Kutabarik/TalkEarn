@@ -26,59 +26,62 @@ body{
     &__container {
         max-width: 85%;
         margin: 0px auto;
-        padding-top: 30px;
+        padding: 30px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        &__logo {
+            display: flex;
+        }
+        
+        &__buttons {
+            display: flex;
+            align-items: center;
+            &__menu {
+                list-style-type: none;
+                font-size: $fs;
+                font-weight: 400;
+                li {
+                    display: inline-block;
+                    margin-right: 50px;
+                }
+                a {
+                    display: block;
+                    color: $darkColor;
+                }
+                
+            }
+            &__connect {
+                color: $whiteColor;
+                font-size: $fs;
+                font-weight: 600;
+                background-color: $purpleColor;
+                padding: 16px;
+                border-radius: 37px;
+            }
+        }
+        &__searchfield {
+            display: flex;
+            align-items: center;
+            & input {
+                width: 400px;
+                height: 50px;
+                background: #FFFFFF;
+                box-shadow: 0px 19px 84px rgba(0, 0, 0, 0.04);
+                border-radius: 60px;
+                padding-left: 20px;
+                font-weight: 400;
+                font-size: $fs;
+            }
+            &__input::-ms-clear { 
+                display: none;
+            }
+            & img {
+                transform: translateX(-45px);
+            }
+        }
     }
-    &__logo {
-        display: flex;
-    }
-    &__menu {
-        list-style-type: none;
-        font-size: $fs;
-        li {
-            display: inline-block;
-            margin-right: 50px;
-        }
-        a {
-            display: block;
-            color: $darkColor;
-        }
-        a:hover {
-            color: $purpleColor;
-        }
-    }
-   
-    &__buttons {
-        a {
-            font-weight: 600;
-            font-size: $fs;
-            border-radius: 30px;
-            padding: 15px 50px;
-        }
-        &__login {
-            margin-right: 20px;
-            color: $darkColor;
-            background-color: #F0EEFF;
-            transition: background 0.3s ease-in-out;
-        }
-        &__signup {
-            background-color: $purpleColor;
-            color: $whiteColor;
-            transition: background 0.3s ease-in-out;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-        &__login:hover {
-            background-color: #eaeaea;
-            box-shadow: 0px 4px 29px rgba(181, 181, 181, 0.14);
-        }
-        &__signup:hover {
-            background-color: #5241c1;
-            box-shadow: 0px 4px 29px rgba(62, 53, 120, 0.14);
-        }
-    }
+    
 }
 
 //Main
@@ -153,8 +156,8 @@ body{
         align-items: flex-end;
         justify-content: center;
         &__man {
-            width: 860px;
-            height: 500px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -245,10 +248,10 @@ body{
                     height: 85px;
                     overflow: hidden;
                     & img {
-                        border-radius: 50%;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        border-radius: 50%;
                     }
                 }
                 
@@ -386,7 +389,7 @@ body{
     }
 }
 
-//Bacome an expert
+//Become an expert
 
 .become-expert {
     margin-top: 60px;
@@ -419,8 +422,8 @@ body{
             }
         }
         & img {
-            width: 1300px;
-            height: 400px;
+            width: 85%;
+            height: 100%;
         }
     }
 }

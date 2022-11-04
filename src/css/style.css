@@ -90,54 +90,58 @@ body {
 .header__container {
   max-width: 85%;
   margin: 0px auto;
-  padding-top: 30px;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header__logo {
+.header__container__logo {
   display: flex;
 }
-.header__menu {
+.header__container__buttons {
+  display: flex;
+  align-items: center;
+}
+.header__container__buttons__menu {
   list-style-type: none;
   font-size: 16px;
+  font-weight: 400;
 }
-.header__menu li {
+.header__container__buttons__menu li {
   display: inline-block;
   margin-right: 50px;
 }
-.header__menu a {
+.header__container__buttons__menu a {
   display: block;
   color: #1F2131;
 }
-.header__menu a:hover {
-  color: #5F4BDB;
-}
-.header__buttons a {
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 30px;
-  padding: 15px 50px;
-}
-.header__buttons__login {
-  margin-right: 20px;
-  color: #1F2131;
-  background-color: #F0EEFF;
-  transition: background 0.3s ease-in-out;
-}
-.header__buttons__signup {
-  background-color: #5F4BDB;
+.header__container__buttons__connect {
   color: #FFF;
-  transition: background 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #5F4BDB;
+  padding: 16px;
+  border-radius: 37px;
 }
-.header__buttons__login:hover {
-  background-color: #eaeaea;
-  box-shadow: 0px 4px 29px rgba(181, 181, 181, 0.14);
+.header__container__searchfield {
+  display: flex;
+  align-items: center;
 }
-.header__buttons__signup:hover {
-  background-color: #5241c1;
-  box-shadow: 0px 4px 29px rgba(62, 53, 120, 0.14);
+.header__container__searchfield input {
+  width: 400px;
+  height: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 19px 84px rgba(0, 0, 0, 0.04);
+  border-radius: 60px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.header__container__searchfield__input::-ms-clear {
+  display: none;
+}
+.header__container__searchfield img {
+  transform: translateX(-45px);
 }
 
 .main__container {
@@ -210,8 +214,8 @@ body {
   justify-content: center;
 }
 .main__right__man {
-  width: 860px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
 .main-header {
@@ -301,11 +305,11 @@ body {
   overflow: hidden;
 }
 .featured-experts__experts__card_left__photo img {
-  border-radius: 50%;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 .featured-experts__experts__card_left__text {
   display: flex;
@@ -453,8 +457,8 @@ body {
   padding: 20px 40px;
 }
 .become-expert__container img {
-  width: 1300px;
-  height: 400px;
+  width: 85%;
+  height: 100%;
 }
 
 .benefits {

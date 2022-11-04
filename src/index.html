@@ -30,7 +30,7 @@
 		<!-- Header -->
 		<header class="header">
 			<div class="header__container">
-				<div class="header__logo">
+				<div class="header__container__logo">
 					<svg width="220" height="55" viewBox="0 0 221 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M78.424 28.1123H74.824V44.0003H70.12V28.1123H68.152V23.7923H70.12V16.4003H74.824V23.7923H78.424V28.1123Z"
@@ -73,17 +73,28 @@
 							d="M43.8327 15.1305H43.7678C43.3133 15.1305 42.9399 14.8206 42.8993 14.4256C42.5178 10.537 39.0275 1.90775 26.2595 1.64438C21.3568 1.54368 17.2983 2.83729 14.2058 5.48648C10.9833 8.25186 9.60346 11.8461 9.35183 14.0228C9.30313 14.4178 8.93786 14.7199 8.49143 14.7199H8.42649C7.92324 14.7199 7.51739 14.3403 7.55798 13.8988C7.85831 11.1489 9.57099 7.26035 12.9558 4.36328C16.4055 1.40424 20.8779 -0.044289 26.3001 0.0719036C39.1005 0.335273 44.2467 8.62368 44.7013 14.3171C44.7337 14.7586 44.336 15.1305 43.8327 15.1305Z"
 							fill="#5F4BDB" />
 					</svg>
-
 				</div>
-				<ul class="header__menu">
-					<li class="header__menu__item"><a href="#">Home</a></li>
-					<li class="header__menu__item"><a href="#">Experts</a></li>
-					<li class="header__menu__item"><a href="#">Blog</a></li>
-					<li class="header__menu__item"><a href="#">Become an expert</a></li>
-				</ul>
-				<div class="header__buttons">
-					<a class="header__buttons__login" href="#">Log In</a>
-					<a class="header__buttons__signup main-button" href=" #">Sing Up</a>
+
+				<div class="header__container__searchfield">
+					<input type="search" class="header__container__searchfield__input" placeholder="Search here...">
+					<img src="/img/index/search.svg" alt="search">
+				</div>
+				
+				<div class="header__container__buttons">
+					<ul class="header__container__buttons__menu">
+						<li class="header__menu__item"><a href="#">Home</a></li>
+						<li class="header__menu__item"><a href="#">Experts</a></li>
+						<li class="header__menu__item"><a href="">Docs</a>
+							<!-- <ul>
+								<li><a href="/expert-one.html">Gitbook</a></li>
+								<li><a href="/expert-one.html">Roadmap</a></li>
+								<li><a href="/expert-one.html">Tokenom</a>ics</li>
+								<li><a href="/expert-one.html">Whitepa</a>per</li>
+								<li><a href="/expert-one.html">Pitch Deck</a></li>
+							</ul> -->
+						</li>
+					</ul>
+					<a class="header__container__buttons__connect" href="#">Connect wallet</a>
 				</div>
 			</div>
 		</header>
