@@ -14,14 +14,9 @@
         position: relative;
         display: flex;
         justify-content: center;
-        background-image: url(/img/cat-one/main/background.png);
+        background-image: url(/src/img/cat-one/main/background.png);
         background-repeat: no-repeat;
         background-size: 100%;
-
-        &__bckg {
-            width: 100%;
-            position: absolute;
-        }
 
         &__content {
             margin-top: 75px;
