@@ -9,6 +9,7 @@ $darkColor:#1F2131;
 $purpleColor:#5F4BDB;
 $whiteColor:#FFF;
 $accentColor: #FE8D4D;
+$bckgColor: #F8F9FD;
 $fs: 16px;
 
 body{
@@ -16,7 +17,7 @@ body{
 }
 
 .bckg{
-    background-color: #F8F9FD;
+    background-color: $bckgColor;
 }
 
 //Header
