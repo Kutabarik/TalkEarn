@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &__arrow {
         display: block;
         position: absolute;
@@ -27,6 +28,7 @@
         padding: 18px 13px;
         border-radius: 40px;
     }
+
     p {
         position: absolute;
         font-size: 28px;
@@ -40,9 +42,186 @@
     width: 70%;
     margin: 0 auto;
     margin-top: -20px;
-    padding: 40px;
+    margin-bottom: 70px;
+    padding: 50px;
     position: relative;
     background: #FFFFFF;
     box-shadow: 0px 0px 28px rgba(62, 53, 120, 0.1);
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        color: $darkColor;
+    }
+
+    &__fields {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        &__input {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: 500;
+                font-size: 14px;
+                color: $darkColor;
+            }
+
+            input {
+                background: #FBFBFB;
+                border: 1px solid #C2C2C2;
+                border-radius: 14px;
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    &__txtarea {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 500;
+            font-size: 14px;
+            color: $darkColor;
+        }
+
+        textarea {
+            background: #FBFBFB;
+            border: 1px solid #C2C2C2;
+            border-radius: 14px;
+            padding: 15px 30px;
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__upload-photo {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &__title {
+            color: $darkColor;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        &__content {
+            display: flex;
+            gap: 15px;
+
+            &__block {
+                background: #F5F5F5;
+                border: 2px dashed #C2C2C2;
+                border-radius: 14px;
+                padding: 10px 10px;
+                display: flex;
+
+                img {
+                    background: $purpleColor;
+                    border-radius: 14px;
+                    padding: 15px 14px;
+                }
+
+                &__input {
+                    display: none;
+                    &__text {
+                        background: #FBFBFB;
+                        border: 1px solid #5F4BDB;
+                        border-radius: 14px;
+                        padding: 10px;
+                    }
+                }
+
+                &__label {
+                    display: flex;
+                    gap: 20px;
+                    cursor: pointer;
+
+                    &__text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        p {
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: $darkColor;
+                        }
+
+                        span {
+                            font-weight: 600;
+                            font-size: 12px;
+                            color: #A5A5A5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__services {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__title {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            &__content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &__block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    input {
+                        background: #FBFBFB;
+                        border: 1px solid #C2C2C2;
+                        border-radius: 14px;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        input {
+            background: #5F4BDB;
+            border-radius: 60px;
+            padding: 10px 40px;
+            color: $whiteColor;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        a {
+            background: #F4F4F4;
+            border-radius: 60px;
+            padding: 10px 40px;
+            color: #9F9F9F;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+}
+
+.video {
+    display: flex;
 }
